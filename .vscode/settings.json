@@ -1,0 +1,14 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.formatOnSave": true,
+  "diffEditor.codeLens": true,
+  "editor.minimap.maxColumn": 100,
+  "prettier.jsxSingleQuote": true,
+  "prettier.packageManager": "yarn",
+  "prettier.singleQuote": true,
+  "editor.quickSuggestions": true,
+  "json.maxItemsComputed": 8000
+}
