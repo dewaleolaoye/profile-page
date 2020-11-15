@@ -231,3 +231,107 @@ nav.content-header span.counter {
 nav.content-header a svg {
   margin-right: 7px;
 }
+
+.repository .search-field {
+  border-bottom: 1px solid #e1e4e8;
+  width: 100%;
+}
+
+.repository .search-field input {
+  padding: 5px 12px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #24292e;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  border: 1px solid #e1e4e8;
+  border-radius: 6px;
+  outline: none;
+  width: 95%;
+  margin-bottom: 16px;
+}
+
+.repository .search-field input:focus {
+  border-color: #0366d6;
+  /* border: 2px solid #0366d6; */
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(3, 102, 214, 0.3);
+}
+
+.repository .repo-details {
+  color: #586069;
+  display: flex;
+  justify-content: space-between;
+  padding: 24px 0;
+  border-bottom: 1px solid #e1e4e8;
+}
+
+.repository .repo-count {
+  border-bottom: 1px solid #e1e4e8;
+}
+
+.repository .repo-count p {
+  color: #24292e;
+}
+
+.repository .repo-count p span {
+  font-weight: bold;
+}
+
+.repository .tags svg {
+  display: inline-block;
+  vertical-align: text-top;
+  fill: #586069;
+
+  margin-right: 5px;
+  /* display: inline-flex;
+  align-items: center; */
+}
+
+.repository .star-badge button {
+  color: #24292e;
+  cursor: pointer;
+  padding: 3px 12px;
+  font-size: 12px;
+  line-height: 20px;
+  background-color: #fafbfc;
+  border: 0.5px solid #e1e4e8;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.repository .star-badge button svg {
+  margin-right: 4px;
+}
+
+.repository .star-badge button:hover {
+  background-color: #f3f4f6;
+  border-color: rgba(27, 31, 35, 0.15);
+  transition-duration: 0.1s;
+}
+
+.repository a.repo-title {
+  text-decoration: none;
+  color: #0366d6;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.repository a.repo-title:hover {
+  text-decoration: underline;
+}
+
+span.planguage-color {
+  background-color: #e34c26;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+a.star-count {
+  padding: 0 1rem;
+  cursor: pointer;
+}
