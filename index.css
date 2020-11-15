@@ -110,3 +110,49 @@ span.dropdown-caret {
   border-bottom: 0 solid transparent;
   border-left: 4px solid transparent;
 }
+
+main {
+  margin-top: 24px;
+}
+
+.container {
+  display: flex;
+  padding: 1rem 2rem;
+}
+
+.profile {
+  flex-basis: 25%;
+}
+
+.repository {
+  flex-basis: 75%;
+}
+
+img.avatar-bg {
+  width: 282px;
+  height: 282px;
+  border-radius: 50%;
+}
+
+.profile h1 {
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+}
+
+span.fullname {
+  font-size: 26px;
+  line-height: 1.25;
+  color: #24292e;
+  font-weight: 600;
+}
+
+span.username {
+  font-size: 20px;
+  color: #586069;
+  font-weight: 400;
+}
+
+.profile .details {
+  color: #24292e;
+}
