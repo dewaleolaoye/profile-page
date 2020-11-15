@@ -6,6 +6,7 @@ body {
   /* padding: 0 32px; */
   padding: 0;
   margin: 0;
+  /* background-color: #f6f8fa; */
 }
 
 /* .mr-1 {
@@ -16,7 +17,7 @@ body {
   margin-right: 1rem;
 } */
 
-a {
+.nav-left a {
   text-decoration: none;
   color: #ffffff;
 }
@@ -24,8 +25,13 @@ a {
 .header-link a {
   margin: 0 0.5rem;
 }
+
 .header-link a:first-child {
   margin-left: 1.5rem;
+}
+
+.header-link a:hover {
+  color: hsl(0deg 0% 100% / 70%);
 }
 
 header {
@@ -33,7 +39,7 @@ header {
   padding: 1rem 2rem;
 }
 
-nav {
+header nav {
   display: flex;
   justify-content: space-between;
 }
@@ -49,7 +55,7 @@ nav {
 }
 
 nav input {
-  background-color: #2f363d;
+  background-color: #24292e;
   padding: 7px 12px;
   border-radius: 6px;
   outline: none;
@@ -63,7 +69,9 @@ nav input {
 }
 
 nav input::placeholder {
-  color: #efefef;
+  /* color: #efefef; */
+  color: #d7dadb;
+  color: hsl(0deg 0% 100% / 70%);
 }
 
 .nav-right,
@@ -73,7 +81,7 @@ nav input::placeholder {
 }
 
 .nav-left {
-  flex-basis: 70%;
+  flex-basis: 75%;
 }
 
 .nav-left label {
@@ -122,6 +130,7 @@ main {
 
 .profile {
   flex-basis: 25%;
+  margin-top: -3rem;
 }
 
 .repository {
@@ -132,6 +141,7 @@ img.avatar-bg {
   width: 282px;
   height: 282px;
   border-radius: 50%;
+  border: 1px solid #e1e4e8;
 }
 
 .profile h1 {
@@ -149,10 +159,75 @@ span.fullname {
 
 span.username {
   font-size: 20px;
+  font-weight: 300;
   color: #586069;
-  font-weight: 400;
 }
 
-.profile .details {
+.profile .title {
   color: #24292e;
+}
+
+nav.content-header {
+  display: flex;
+  border-bottom: 1px solid #e1e4e8;
+}
+
+.empty-space {
+  flex-basis: 27.2%;
+}
+
+/* .tab-wrapper {
+  flex-basis: 75%;
+} */
+
+nav.content-header a {
+  font-size: 14px;
+  color: #24292e;
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 8px 16px;
+  font-size: 14px;
+  line-height: 30px;
+  text-align: center;
+  white-space: nowrap;
+  background-color: initial;
+  white-space: nowrap;
+  background-color: initial;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom-color 0.36s ease-in;
+}
+
+nav.content-header a:hover {
+  color: #24292e;
+  text-decoration: none;
+  border-bottom-color: #d1d5da;
+  outline: 1px dotted transparent;
+  outline-offset: -1px;
+  transition-timing-function: ease-out;
+  transition-duration: 0.12s;
+}
+
+nav.content-header a.active {
+  border-bottom-color: #f9826c;
+  font-weight: 600;
+}
+nav.content-header span.counter {
+  display: inline-block;
+  color: #24292e;
+  min-width: 20px;
+  padding: 0 6px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  margin-left: 5px;
+  text-align: center;
+  background-color: rgba(209, 213, 218, 0.5);
+  border: 1px solid transparent;
+  border-radius: 2em;
+}
+
+nav.content-header a svg {
+  margin-right: 7px;
 }
