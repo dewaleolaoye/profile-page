@@ -134,7 +134,7 @@
               ></path>
             </svg>
 
-            Repositories <span class="counter">132</span></a
+            Repositories <span class="counter total-count">0</span></a
           >
           <a href="#">
             <svg
@@ -174,16 +174,13 @@
       <!-- Profile Section -->
       <section class="container">
         <section class="profile">
-          <img
-            src="https://avatars1.githubusercontent.com/u/44645460?s=460&u=b12fd2ea227d4e2b13af565e7bef1afe227f9365&v=4"
-            alt="Github user"
-            class="avatar-bg"
-          />
+          <!-- <img src="" alt="Github user" class="avatar-bg" id="avatar-bg" /> -->
+          <div class="profile-img"></div>
           <h1>
-            <span class="fullname">Adewale Olaoye</span>
-            <span class="username">@dewaleolaoye</span>
+            <span class="fullname"></span>
+            <span class="username"></span>
           </h1>
-          <div class="title">Mathematician | Software Developer</div>
+          <div class="bio"></div>
         </section>
 
         <section class="repository">
@@ -192,7 +189,10 @@
           </div>
 
           <div class="repo-count">
-            <p><span>124</span> results for <span>public</span> repositories</p>
+            <p>
+              <span id="counter">0</span> results for
+              <span>public</span> repositories
+            </p>
           </div>
 
           <div class="repo-details">
@@ -388,6 +388,7 @@
         </section>
       </section>
     </main>
+
     <script src="index.js"></script>
   </body>
 </html>
