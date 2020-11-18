@@ -41,7 +41,7 @@ header {
 
 header nav {
   display: grid;
-  grid-template-columns: 13fr 1fr;
+  grid-template-columns: 11fr 1fr;
 }
 /* header nav {
   display: flex;
@@ -432,4 +432,28 @@ nav.mobile-content-header {
   a.star-count {
     padding: 0 0.5rem;
   }
+
+  .desktop-header {
+    display: none;
+  }
+
+  header.mobile-header {
+    display: block;
+  }
+
+  header nav {
+    grid-template-columns: 1fr 1fr 0fr;
+    align-items: center;
+  }
+}
+
+.mobile-header {
+  display: none;
+}
+
+img.small-avatar {
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
 }
