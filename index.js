@@ -51,7 +51,7 @@ const fetchTotalRepoCount = () => {
     method: 'POST',
     headers: {
       'Content-Type': 'appliation/json',
-      Authorization: 'Bearer 2d198d966490cfafcafb1acab20667008ebea795',
+      Authorization: `Bearer ${GITHUB_API}`,
     },
     body: JSON.stringify({
       query: TOTAL_REPO_COUNT,
@@ -66,12 +66,14 @@ const fetchTotalRepoCount = () => {
     });
 };
 
+const token = process.env.GITHUB_API;
+
 const fetchGitHubData = () => {
   fetch(API, {
     method: 'POST',
     headers: {
       'Content-Type': 'appliation/json',
-      Authorization: 'Bearer 2d198d966490cfafcafb1acab20667008ebea795',
+      Authorization: `Bearer ${GITHUB_API}`,
     },
     body: JSON.stringify({
       query: USER_QUERY,
