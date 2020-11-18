@@ -39,6 +39,7 @@ const getBio = document.querySelector('.bio');
 const selectProfile = document.querySelector('.profile-img');
 const publicRepoCount = document.getElementById('counter');
 const getTotalCount = document.querySelector('.total-count');
+const getTotalCountMb = document.querySelector('.mb-total-count');
 
 const selectRepo = document.querySelector('.repo-details');
 // console.log(selectRepo, 'rep');
@@ -61,6 +62,7 @@ const fetchTotalRepoCount = () => {
       const totalcount = data.data.user.repositories.totalCount;
 
       getTotalCount.innerHTML = totalcount;
+      getTotalCountMb.innerHTML = totalcount;
     });
 };
 
@@ -84,7 +86,7 @@ const fetchGitHubData = () => {
 
       selectProfile.innerHTML += `<img alt="Github user" class="avatar-bg" src=${userDetails.avatarUrl} />`;
       getFullname.innerHTML += userDetails.name;
-      getUsername.innerHTML += `@${userDetails.login}`;
+      getUsername.innerHTML += `${userDetails.login}`;
       getBio.innerHTML += userDetails.bio;
       publicRepoCount.innerHTML = userDetails.repositories.totalCount;
 
