@@ -46,7 +46,7 @@ const selectSummary = document.querySelector('summary');
 
 const API = 'https://api.github.com/graphql';
 
-const GITHUB_API = 'b795e3f1fff1dcd4c01ca35a0a12bddd52910f06';
+const GITHUB_API = '';
 
 const fetchTotalRepoCount = () => {
   fetch(API, {
