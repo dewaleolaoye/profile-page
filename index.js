@@ -8,6 +8,7 @@ const USER_QUERY = `query {
     totalCount
     nodes {
       name
+      url
       updatedAt
       stargazerCount
       description
@@ -40,9 +41,8 @@ const selectProfile = document.querySelector('.profile-img');
 const publicRepoCount = document.getElementById('counter');
 const getTotalCount = document.querySelector('.total-count');
 const getTotalCountMb = document.querySelector('.mb-total-count');
-
 const selectRepo = document.querySelector('.repo-details');
-// console.log(selectRepo, 'rep');
+const selectSummary = document.querySelector('summary');
 
 const API = 'https://api.github.com/graphql';
 
@@ -81,10 +81,10 @@ const fetchGitHubData = () => {
     .then((data) => {
       const userDetails = data.data.user;
 
-      // console.log(userDetails, 'userdetails');
-      console.log(userDetails.repositories.nodes, 'repositories');
-
       selectProfile.innerHTML += `<img alt="Github user" class="avatar-bg" src=${userDetails.avatarUrl} />`;
+      // selectSummary.innerHTML += `<img alt="Github user" class="small-avatar" src=${userDetails.avatarUrl} />`;
+      const smAvatarHtml = `<img alt="Github user" class="small-avatar" src=${userDetails.avatarUrl} />`;
+      selectSummary.insertAdjacentHTML('beforebegin', smAvatarHtml);
       getFullname.innerHTML += userDetails.name;
       getUsername.innerHTML += `${userDetails.login}`;
       getBio.innerHTML += userDetails.bio;
@@ -94,14 +94,15 @@ const fetchGitHubData = () => {
 
       const html = repo
         .map((repo) => {
-          // console.log(repo.languages.nodes, 'nodes');
           const checkNode = repo.languages.nodes.length;
           const repoNode = repo.languages.nodes[0];
           return `
         <div class="repo-details">
         <div class="tags">
         
-        <a href="#" class="repo-title">${repo.name}</a>
+        <a href="${repo.url}" target="_blank" class="repo-title">${
+            repo.name
+          }</a>
         <p class="repo-description">${
           repo.description === null ? '' : repo.description
         }</p>
@@ -178,7 +179,6 @@ const fetchGitHubData = () => {
     })
     .catch((err) => {
       console.log(err.message, 'erro');
-      throw err;
     });
 };
 
