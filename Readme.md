@@ -6,4 +6,4 @@
 - CSS
 - Javascript
 
-You can view the page [here](https://profile-page-alpha.vercel.app/)
+You can view the page [here](https://profile-page.dewaleolaoye.vercel.app/)
