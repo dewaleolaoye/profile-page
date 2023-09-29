@@ -68,6 +68,21 @@ const fetchTotalRepoCount = () => {
     });
 };
 
+const formatDate = (value) => {
+  const newDate = new Date(value);
+  const options = {
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric',
+    hour: 'numeric',
+    minute: 'numeric',
+  };
+
+  const toLocale = newDate.toLocaleDateString('en-US', options);
+
+  return toLocale;
+};
+
 const fetchGitHubData = () => {
   fetch(API, {
     method: 'POST',
@@ -143,7 +158,7 @@ const fetchGitHubData = () => {
           >${repo.forkCount}
         </a>
 
-        <span>updated on ${repo.updatedAt}</span>
+        <span>updated on ${formatDate(repo.updatedAt)}</span>
       </div>
       </div>
 
