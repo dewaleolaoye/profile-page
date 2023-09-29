@@ -102,17 +102,11 @@ const fetchGitHubData = () => {
         <div class="repo-details">
         <div class="tags">
         
-        <a href="${repo.url}" target="_blank" class="repo-title">${
-            repo.name
-          }</a>
-        <p class="repo-description">${
-          repo.description === null ? '' : repo.description
-        }</p>
+        <a href="${repo.url}" target="_blank" class="repo-title">${repo.name}</a>
+        <p class="repo-description">${repo.description === null ? '' : repo.description}</p>
         <div class="icons">
 
-        <span style="background-color: ${
-          checkNode !== 0 ? repoNode.color : ''
-        }" class="planguage-color"></span>
+        <span style="background-color: ${checkNode !== 0 ? repoNode.color : ''}" class="planguage-color"></span>
 
         <span class="planguage">${checkNode !== 0 ? repoNode.name : ''}</span>
 
